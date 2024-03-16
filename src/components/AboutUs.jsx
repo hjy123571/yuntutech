@@ -30,7 +30,7 @@ const AboutUsComponent = () => {
         flexDirection: isNarrowScreen ? "column" : "row",
         alignItems: "center",
         justifyContent: "flex-start",
-        px: theme.spacing(11.25),
+        px: "4.6%",
         pt: theme.spacing(14),
       }}
     >

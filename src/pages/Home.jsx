@@ -104,7 +104,13 @@ function Home() {
       >
         <HomeProductsComponent products={homeProductsData} />
       </Box>
-      <WeProvideComponent />
+      <Box
+        sx={{
+          mt: theme.spacing(21.3),
+        }}
+      >
+        <WeProvideComponent />
+      </Box>
       <AboutUs />
       <ImageGallery />
       <LogoWallComponent isLarge={true} />

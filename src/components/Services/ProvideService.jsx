@@ -23,13 +23,12 @@ const WeProvideComponent = () => {
     t("serviceDesc5"),
     t("serviceDesc6"),
   ];
+
   return (
     <Box
       sx={{
-        mt: "11rem",
         px: "4.6%",
-        // display: "flex",
-        // flexDirection: "column",
+        width: "100%",
       }}
     >
       <Typography
@@ -41,44 +40,62 @@ const WeProvideComponent = () => {
       >
         {t("serviceProvideTitle")}
       </Typography>
-
-      <Grid container spacing={isNarrowScreen ? 2 : 4}>
-        <Grid item xs={12} sm={6}>
-          <Typography variant="h4" sx={{ fontSize: "1.69rem" }}>
+      <Grid container spacing={4} justifyContent="center">
+        <Grid item sm={10} md={5}>
+          <Typography
+            variant="h4"
+            sx={{ fontSize: "1.69rem", textAlign: "left" }}
+          >
             {t("service1")}
           </Typography>
-          <Typography variant="h4" sx={{ fontSize: "1.69rem" }}>
+          <Typography
+            variant="h4"
+            sx={{ fontSize: "1.69rem", textAlign: "left" }}
+          >
             {t("service2")}
           </Typography>
-          <Typography variant="h4" sx={{ fontSize: "1.69rem" }}>
+          <Typography
+            variant="h4"
+            sx={{ fontSize: "1.69rem", textAlign: "left" }}
+          >
             {t("service3")}
           </Typography>
         </Grid>
-        {!isNarrowScreen && (
-          <Grid item xs={12} sm={6}>
-            <Typography variant="h4" sx={{ fontSize: "1.69rem" }}>
-              {t("service4")}
-            </Typography>
-            <Typography variant="h4" sx={{ fontSize: "1.69rem" }}>
-              {t("service5")}
-            </Typography>
-            <Typography variant="h4" sx={{ fontSize: "1.69rem" }}>
-              {t("service6")}
-            </Typography>
-          </Grid>
-        )}
+        <Grid item sm={10} md={5}>
+          <Typography
+            variant="h4"
+            sx={{ fontSize: "1.69rem", textAlign: "left" }}
+          >
+            {t("service4")}
+          </Typography>
+          <Typography
+            variant="h4"
+            sx={{ fontSize: "1.69rem", textAlign: "left" }}
+          >
+            {t("service5")}
+          </Typography>
+          <Typography
+            variant="h4"
+            sx={{ fontSize: "1.69rem", textAlign: "left" }}
+          >
+            {t("service6")}
+          </Typography>
+        </Grid>
       </Grid>
-
       <Grid
         container
-        spacing={"3.75%vw"}
-        mx={"3.5%vw"}
         sx={{
+          mt: theme.spacing(11.25),
+          py: `calc(100vw * 0.032)`,
+          px: "3.9%",
           backgroundColor: "#f1f1f1",
+          "& > .MuiGrid-item": {
+            px: "3.75%",
+          },
         }}
       >
         {serviceImages.map((image, index) => (
-          <Grid item xs={12} sm={6} md={4} key={index}>
+          <Grid item sm={6} md={4} key={index}>
             <Box
               component="img"
               src={image}
@@ -90,7 +107,7 @@ const WeProvideComponent = () => {
               sx={{ fontSize: "1.12rem", textAlign: "center" }}
               gutterBottom
             >
-              {serviceDesc[0]}
+              {serviceDesc[index]}
             </Typography>
           </Grid>
         ))}

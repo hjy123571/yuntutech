@@ -110,7 +110,7 @@ const ProductsComponent = ({ products }) => {
       {selectedTab === 0 && (
         <Box
           sx={{
-            px: theme.spacing(11.25),
+            px: "4.6%",
           }}
         >
           <ProductBannerCard
@@ -143,7 +143,7 @@ const ProductsComponent = ({ products }) => {
       {selectedTab === 1 && (
         <Box
           sx={{
-            px: theme.spacing(11.25),
+            px: "4.6%",
           }}
         >
           <Grid container spacing={isNarrowScreen ? 0 : theme.spacing(5.75)}>
