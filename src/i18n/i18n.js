@@ -43,9 +43,11 @@ i18n.use(initReactI18next).init({
         footerAbout: "About Us",
         footerContact: "Contact Us",
         footerFollow: "Follow Us",
-        footerEmail: "Email: service@yuntutech.com",
-        footerAddress: "浙江省湖州市安吉县天子湖镇共创小微产业园",
+        footerEmail: "service@yuntutech.com",
+        footerAddress:
+          "Co-creation small and micro industrial park, Tianzihu Town, Anji County, Huzhou City, Zhejiang Province.",
         footerPhone: "Phone： +86 13488708445",
+        footerName: "Yuntu Air Vehicle Technology",
         // Products
         prodcuctFan: "electric ducted fan",
         productAircraft: "ducted fan derivative aircraft",
@@ -93,6 +95,18 @@ i18n.use(initReactI18next).init({
           "Aircraft structural design,strength analysis and test",
         serviceDetailTitle8:
           "Aircraft stability analysis and flight control law design",
+        service1: "Advanced aerodynamic design",
+        service2: "Lightweight and high strength composite structure design",
+        service3: "High fidelity CFD analysis",
+        service4: "Advanced flight control algorithms",
+        service5: "Advanced wind tunnel test",
+        service6: "Active and passive noise reduction",
+        serviceDesc1: "Advanced Aerodynamic Design",
+        serviceDesc2: "Advanced Flight Control",
+        serviceDesc3: "Lightweight And High Structure Design",
+        serviceDesc4: "Advanced Wind Tunnel Test",
+        serviceDesc5: "High Fidelity CFD Analysis",
+        serviceDesc6: "Active And Passive Noise Reduction",
         // Contact
         contactTitle: "Contact Us",
         contactSubtitle:
@@ -134,12 +148,14 @@ i18n.use(initReactI18next).init({
         homeFanTab: "Electric Ducted Fan",
         homeAircraftTab: "Ducted Fan Derivative Aircraft",
         // Footer
-        footerAbout: "关于我们",
-        footerContact: "联系我们",
-        footerFollow: "关注我们",
-        footerEmail: "联系邮箱号: service@yuntutech.com",
-        footerAddress: "浙江省湖州市安吉县天子湖镇共创小微产业园",
-        footerPhone: "联系电话： +86 13488708445",
+        footerAbout: "About Us",
+        footerContact: "Contact Us",
+        footerFollow: "Follow Us",
+        footerEmail: "service@yuntutech.com",
+        footerAddress:
+          "Co-creation small and micro industrial park, Tianzihu Town, Anji County, Huzhou City, Zhejiang Province.",
+        footerPhone: "Phone： +86 13488708445",
+        footerName: "Yuntu Air Vehicle Technology",
         // Products
         prodcuctFan: "电动涵道风扇",
         productAircraft: "涵道风扇衍生飞行器",
@@ -183,6 +199,18 @@ i18n.use(initReactI18next).init({
         serviceDetailTitle7: "飞行器整机结构强度设计、分析及测试",
         serviceDetailTitle8: "全机操稳特性分析及控制律设计",
         readMore: "了解更多",
+        service1: "Advanced aerodynamic design",
+        service2: "Lightweight and high strength composite structure design",
+        service3: "High fidelity CFD analysis",
+        service4: "Advanced flight control algorithms",
+        service5: "Advanced wind tunnel test",
+        service6: "Active and passive noise reduction",
+        serviceDesc1: "Advanced Aerodynamic Design",
+        serviceDesc2: "Advanced Flight Control",
+        serviceDesc3: "Lightweight And High Structure Design",
+        serviceDesc4: "Advanced Wind Tunnel Test",
+        serviceDesc5: "High Fidelity CFD Analysis",
+        serviceDesc6: "Active And Passive Noise Reduction",
         // Contact
         contactTitle: "联系我们",
         contactSubtitle:

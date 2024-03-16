@@ -1,81 +1,104 @@
-import * as React from "react";
-import Container from "@mui/material/Container";
-import Typography from "@mui/material/Typography";
-import Link from "@mui/material/Link";
-import Grid from "@mui/material/Grid";
-import { Facebook, Instagram, Twitter } from "@mui/icons-material";
-import { Box } from "@mui/material";
+import React from "react";
+import {
+  Box,
+  Typography,
+  IconButton,
+  useTheme,
+  useMediaQuery,
+} from "@mui/material";
+import EmailIcon from "@mui/icons-material/Email";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import TwitterIcon from "@mui/icons-material/Twitter";
 import { useTranslation } from "react-i18next";
 
-export default function Footer() {
+const FooterComponent = () => {
   const { t } = useTranslation();
+  const theme = useTheme();
+  const isNotXLScreen = useMediaQuery(theme.breakpoints.down("xl"));
+
+  const iconStyle = {
+    fontSize: "1.45rem",
+    marginRight: "1.31rem",
+  };
 
   return (
     <Box
-      component="footer"
       sx={{
-        backgroundColor: (theme) =>
-          theme.palette.mode === "light"
-            ? theme.palette.grey[200]
-            : theme.palette.grey[800],
-        p: 6,
+        py: "6rem",
+        display: "flex",
+        justifyContent: "space-between",
+        pl: "10%",
+        pr: isNotXLScreen ? "10%" : "20",
+        bgcolor: "#ededed",
       }}
     >
-      <Container maxWidth="lg">
-        <Grid container spacing={5}>
-          <Grid item xs={12} sm={4}>
-            <Typography variant="h6" color="text.primary" gutterBottom>
-              {t("footerAbout")}
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              We are XYZ company, dedicated to providing the best service to our
-              customers.
-            </Typography>
-          </Grid>
-          <Grid item xs={12} sm={4}>
-            <Typography variant="h6" color="text.primary" gutterBottom>
-            {t("footerContact")}
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              {t("footerAddress")}
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              {t("footerEmail")}
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              {t("footerPhone")}
-            </Typography>
-          </Grid>
-          <Grid item xs={12} sm={4}>
-            <Typography variant="h6" color="text.primary" gutterBottom>
-              {t("footerFollow")}
-            </Typography>
-            <Link href="https://www.facebook.com/" color="inherit">
-              <Facebook />
-            </Link>
-            <Link
-              href="https://www.instagram.com/"
-              color="inherit"
-              sx={{ pl: 1, pr: 1 }}
-            >
-              <Instagram />
-            </Link>
-            <Link href="https://www.twitter.com/" color="inherit">
-              <Twitter />
-            </Link>
-          </Grid>
-        </Grid>
-        <Box mt={5}>
-          <Typography variant="body2" color="text.secondary" align="center">
-            {"Copyright © "}
-            <Link color="inherit" href="https://your-website.com/">
-              Your Website
-            </Link>{" "}
-            {new Date().getFullYear()}
-            {"."}
+      <Box sx={{ display: "flex", flexDirection: "column" }}>
+        <Typography variant="h2" sx={{ fontSize: "1.9375rem" }}>
+          {t("footerName")}
+        </Typography>
+        <Box sx={{ display: "flex", alignItems: "center", mt: "1.45rem" }}>
+          <LocationOnIcon sx={{ ...iconStyle }} />
+          <Typography
+            sx={{
+              fontSize: "0.84rem",
+              color: "#333333",
+            }}
+          >
+            {t("footerAddress")}
           </Typography>
         </Box>
-      </Container>
+        <Box sx={{ display: "flex", alignItems: "center", mt: "0.5rem" }}>
+          <EmailIcon sx={{ ...iconStyle }} />
+          <Typography
+            sx={{
+              fontSize: "0.84rem",
+              color: "#333333",
+            }}
+          >
+            {t("footerEmail")}
+          </Typography>
+        </Box>
+      </Box>
+
+      {/* Social Media Icons */}
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "flex-end",
+        }}
+      >
+        <Typography variant="h2" sx={{ fontSize: "1.9375rem" }}>
+          {t("footerFollow")}
+        </Typography>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "center",
+          }}
+        >
+          <IconButton aria-label="Facebook" size="large">
+            <FacebookIcon
+              sx={{
+                fontSize: "2.11rem",
+                color: "#000000",
+              }}
+            />
+          </IconButton>
+          <IconButton aria-label="Twitter" size="large">
+            <TwitterIcon
+              sx={{
+                fontSize: "2.11rem",
+                color: "#000000",
+              }}
+            />
+          </IconButton>
+        </Box>
+      </Box>
     </Box>
   );
-}
+};
+
+export default FooterComponent;

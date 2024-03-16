@@ -19,6 +19,7 @@ const ProductsComponent = ({ products }) => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const isNarrowScreen = useMediaQuery(theme.breakpoints.down("sm"));
+  const isMiddleScreen = useMediaQuery(theme.breakpoints.down("md"));
   const [selectedTab, setSelectedTab] = useState(0);
   const [selectedProduct, setSelectedProduct] = useState(null);
 
@@ -113,7 +114,7 @@ const ProductsComponent = ({ products }) => {
           }}
         >
           <ProductBannerCard
-            isNarrowScreen={isNarrowScreen}
+            isNarrowScreen={isNarrowScreen || isMiddleScreen}
             image={products[0][0].image}
             title={products[0][0].title}
             subtitle={products[0][0].subtitle}
@@ -122,7 +123,7 @@ const ProductsComponent = ({ products }) => {
             }
           />
           <Box mt={4.5} />
-          <Grid container spacing={isNarrowScreen ? 0 : theme.spacing(5)}>
+          <Grid container spacing={isNarrowScreen ? 0 : theme.spacing(5.75)}>
             {products[0].slice(1).map((product, index) => (
               <Grid item xs={12} md={4} key={product.key}>
                 <ProductSmallCard
@@ -145,7 +146,7 @@ const ProductsComponent = ({ products }) => {
             px: theme.spacing(11.25),
           }}
         >
-          <Grid container>
+          <Grid container spacing={isNarrowScreen ? 0 : theme.spacing(5.75)}>
             {products[0].slice(1).map((product, index) => (
               <Grid item xs={12} md={4} key={product.key}>
                 <ProductSmallCard

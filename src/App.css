@@ -36,3 +36,28 @@
     transform: rotate(360deg);
   }
 }
+
+.html {
+  font-size: 16px; /* 默认情况下，1rem = 16px */
+}
+
+/* 屏幕宽度小于600px */
+@media (max-width: 599px) {
+  .html {
+    font-size: 14px; /* 此时，1rem = 14px */
+  }
+}
+
+/* 屏幕宽度在600px到900px之间 */
+@media (min-width: 600px) and (max-width: 899px) {
+  .html {
+    font-size: 15px; /* 此时，1rem = 15px */
+  }
+}
+
+/* 屏幕宽度大于或等于900px */
+@media (min-width: 900px) {
+  .html {
+    font-size: 18px; /* 此时，1rem = 18px */
+  }
+}

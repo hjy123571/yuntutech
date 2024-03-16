@@ -1,7 +1,6 @@
 import React from "react";
 import CssBaseline from "@mui/material/CssBaseline";
 import Navbar, { NavTabType } from "../components/Navbar";
-import ServiceContent from "../components/ServiceContent";
 import AboutUs from "../components/AboutUs";
 import Footer from "../components/Footer";
 import ContactForm from "../components/ContactForm";
@@ -12,6 +11,7 @@ import BannerCarousel from "../components/Home/BannerCarousel";
 import HomeProductsComponent from "../components/Home/HomeProductsComponent";
 import ImageGallery from "../components/Home/ImageGallery";
 import LogoWallComponent from "../components/LogoWall";
+import WeProvideComponent from "../components/Services/ProvideService";
 
 function Home() {
   const theme = useTheme();
@@ -104,7 +104,7 @@ function Home() {
       >
         <HomeProductsComponent products={homeProductsData} />
       </Box>
-      {/* <ServiceContent /> */}
+      <WeProvideComponent />
       <AboutUs />
       <ImageGallery />
       <LogoWallComponent isLarge={true} />

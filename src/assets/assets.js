@@ -41,3 +41,11 @@ export { default as logo1 } from "./images/logo_1.png";
 export { default as logo2 } from "./images/logo_2.png";
 export { default as logo3 } from "./images/logo_3.png";
 export { default as logo4 } from "./images/logo_4.png";
+
+/// Service
+export { default as service1 } from "./images/service_1.png";
+export { default as service2 } from "./images/service_2.png";
+export { default as service3 } from "./images/service_3.png";
+export { default as service4 } from "./images/service_4.png";
+export { default as service5 } from "./images/service_5.png";
+export { default as service6 } from "./images/service_6.png";

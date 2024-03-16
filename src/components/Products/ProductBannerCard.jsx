@@ -11,7 +11,6 @@ const ProductBannerCard = ({
 }) => {
   const theme = useTheme();
   const { t } = useTranslation();
-  console.log("isNarrowScreen", isNarrowScreen);
   const paddingTop = `${(801 / 1741) * 100}%`; // (height / width) * 100
   return (
     <Box
@@ -29,9 +28,8 @@ const ProductBannerCard = ({
         sx={{
           position: "absolute",
           top: "25%",
-          left: isNarrowScreen ? "50%" : "33.3%",
-          transform: "translateX(-50%)", // Center-align the content box
-          width: "50%",
+          left: "13%",
+          width: isNarrowScreen ? "74%" : "50%",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",

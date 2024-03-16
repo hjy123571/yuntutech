@@ -9,7 +9,6 @@ const LogoWallComponent = ({ isLarge }) => {
   const isNarrowScreen = useMediaQuery(theme.breakpoints.down("md"));
   const imagePaths = [images.logo1, images.logo2, images.logo3, images.logo4];
   const spacing = theme.spacing(27.25);
-  console.log("isLarge: ", isLarge);
 
   const top = isLarge ? theme.spacing(15.25) : theme.spacing(13.5);
   const textAlignment = isLarge ? "center" : "left";

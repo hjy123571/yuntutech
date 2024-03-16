@@ -50,6 +50,7 @@ const Navbar = ({ selectedTab }) => {
   `;
 
   const StyledButton = styled(Button)(({ isSelected }) => ({
+    textDecoration: "none",
     fontSize: theme.typography.navFontSize,
     lineHeight: "34px",
     backgroundColor: "transparent",
@@ -160,7 +161,7 @@ const Navbar = ({ selectedTab }) => {
                 open={Boolean(mainMenuAnchorEl)}
                 onClose={handleClose}
               >
-                <Link to="/">
+                <Link to="/" style={{ textDecoration: "none" }}>
                   <MenuItem
                     disableRipple
                     onClick={handleClose}
@@ -169,7 +170,7 @@ const Navbar = ({ selectedTab }) => {
                     <StyledTypography>{t("home")}</StyledTypography>
                   </MenuItem>
                 </Link>
-                <Link to="/products">
+                <Link to="/products" style={{ textDecoration: "none" }}>
                   <MenuItem
                     disableRipple
                     onClick={handleClose}
@@ -205,7 +206,7 @@ const Navbar = ({ selectedTab }) => {
         ) : (
           <TabsContainer>
             {/* 普通窗口大小的按钮 */}
-            <Link to="/">
+            <Link to="/" style={{ textDecoration: "none" }}>
               <StyledButton
                 disableRipple
                 color="inherit"
@@ -214,7 +215,7 @@ const Navbar = ({ selectedTab }) => {
                 {t("home")}
               </StyledButton>
             </Link>
-            <Link to="/products">
+            <Link to="/products" style={{ textDecoration: "none" }}>
               <StyledButton
                 disableRipple
                 color="inherit"
@@ -223,7 +224,7 @@ const Navbar = ({ selectedTab }) => {
                 {t("electricFan")}
               </StyledButton>
             </Link>
-            <Link to="/service">
+            <Link to="/service" style={{ textDecoration: "none" }}>
               <StyledButton
                 disableRipple
                 color="inherit"
@@ -232,7 +233,7 @@ const Navbar = ({ selectedTab }) => {
                 {t("serviceRange")}
               </StyledButton>
             </Link>
-            <Link to="/about">
+            <Link to="/about" style={{ textDecoration: "none" }}>
               <StyledButton
                 disableRipple
                 color="inherit"
@@ -241,7 +242,7 @@ const Navbar = ({ selectedTab }) => {
                 {t("aboutUs")}
               </StyledButton>
             </Link>
-            <Link to="/contact">
+            <Link to="/contact" style={{ textDecoration: "none" }}>
               <StyledButton
                 disableRipple
                 color="inherit"

@@ -37,12 +37,24 @@ const theme = createTheme({
     h3: {
       fontFamily: "PingFangSC-Semibold, Arial, sans-serif",
     },
+    h4: {
+      fontFamily: "PingFangSC-Thin, Arial, sans-serif",
+    },
     navFontSize: "0.825rem",
   },
   spacing: 8, // 间距基准
   tabs: {
     selectedColor: "#ffffff",
     hoverColor: "#1565c0",
+  },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 960,
+      lg: 1280,
+      xl: 1920,
+    },
   },
 });
 
