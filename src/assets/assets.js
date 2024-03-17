@@ -1,7 +1,7 @@
 export { default as bg1 } from "./images/bg_1.png";
 export { default as bg2 } from "./images/bg_2.png";
 export { default as bg3 } from "./images/bg_3.png";
-
+export { default as bg4 } from "./images/bg_4.png";
 /// Header
 export { default as Logo } from "./images/logo.png";
 export { default as LogoWhite } from "./images/logo-white.png";

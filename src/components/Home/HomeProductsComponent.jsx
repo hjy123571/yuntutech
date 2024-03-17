@@ -115,9 +115,9 @@ const ProductsComponent = ({ products }) => {
         >
           <ProductBannerCard
             isNarrowScreen={isNarrowScreen || isMiddleScreen}
-            image={products[0][0].image}
-            title={products[0][0].title}
-            subtitle={products[0][0].subtitle}
+            image={products[0][0].bannerImage}
+            title={products[0][0].detailTitle}
+            subtitle={products[0][0].subTitle}
             onClick={() =>
               handleProductClick(products[0][0].key, products[0][0])
             }
@@ -127,11 +127,12 @@ const ProductsComponent = ({ products }) => {
             {products[0].slice(1).map((product, index) => (
               <Grid item xs={12} md={4} key={product.key}>
                 <ProductSmallCard
-                  image={product.image}
-                  title={product.title}
-                  subtitle={product.subtitle}
+                  image={product.cardImage}
+                  title={product.detailTitle}
+                  subtitle={product.subTitle}
                   isSelected={product.key === selectedProduct}
                   onClick={() => handleProductClick(product.key, product)}
+                  paddingBottom={"calc(100% * (826 / 550))"}
                 />
               </Grid>
             ))}
@@ -147,14 +148,16 @@ const ProductsComponent = ({ products }) => {
           }}
         >
           <Grid container spacing={isNarrowScreen ? 0 : theme.spacing(5.75)}>
-            {products[0].slice(1).map((product, index) => (
+            {products[1].map((product, index) => (
               <Grid item xs={12} md={4} key={product.key}>
                 <ProductSmallCard
-                  image={product.image}
-                  title={product.title}
-                  subtitle={product.subtitle}
+                  image={product.cardImage}
+                  title={product.detailTitle}
+                  subtitle={product.subTitle}
                   isSelected={product.key === selectedProduct}
-                  onClick={() => handleProductClick(product.key, product)}
+                  // onClick={() => handleProductClick(product.key, product)}
+                  top={"58%"}
+                  paddingBottom={"calc(100% * (932 / 550))"}
                 />
               </Grid>
             ))}

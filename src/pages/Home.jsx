@@ -12,6 +12,11 @@ import HomeProductsComponent from "../components/Home/HomeProductsComponent";
 import ImageGallery from "../components/Home/ImageGallery";
 import LogoWallComponent from "../components/LogoWall";
 import WeProvideComponent from "../components/Services/ProvideService";
+import ServiceScopes from "../components/Services/ServiceScopes";
+import {
+  airCraftsData,
+  fanCardsData,
+} from "../components/Products/FanProductsData";
 
 function Home() {
   const theme = useTheme();
@@ -37,61 +42,8 @@ function Home() {
       textPosition: "right",
     },
   ];
+  const homeProductsData = [fanCardsData, airCraftsData];
 
-  const fanData = [
-    {
-      key: "fan1",
-      image: images.FanBanner60kg,
-      title: t("homeProduct1Title"),
-      subtitle: t("homeProduct1Subtitle"),
-      isLarge: true,
-    },
-    {
-      key: "fan2",
-      image: images.FanCard200kg,
-      title: t("homeProduct2Title"),
-      subtitle: t("homeProduct2Subtitle"),
-      isLarge: false,
-    },
-    {
-      key: "fan3",
-      image: images.FanCard500kg,
-      title: t("homeProduct3Title"),
-      subtitle: t("homeProduct3Subtitle"),
-      isLarge: false,
-    },
-    {
-      key: "fan4",
-      image: images.FanCard1000kg,
-      title: t("homeProduct4Title"),
-      subtitle: t("homeProduct4Subtitle"),
-      isLarge: false,
-    },
-  ];
-  const aircraftData = [
-    {
-      key: "aircraft1",
-      image: images.AircraftCard200kg,
-      title: t("homeProduct5Title"),
-      subtitle: t("homeProduct5Subtitle"),
-      isLarge: true,
-    },
-    {
-      key: "aircraft2",
-      image: images.AircraftCard260kg,
-      title: t("homeProduct6Title"),
-      subtitle: t("homeProduct6Subtitle"),
-      isLarge: false,
-    },
-    {
-      key: "aircraft3",
-      image: images.AircraftCard1000kg,
-      title: t("homeProduct7Title"),
-      subtitle: t("homeProduct7Subtitle"),
-      isLarge: false,
-    },
-  ];
-  const homeProductsData = [fanData, aircraftData];
   return (
     <React.Fragment>
       <CssBaseline />

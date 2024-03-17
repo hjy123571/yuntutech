@@ -1,5 +1,5 @@
 import * as images from "../assets/assets";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Box, Grid, useTheme, useMediaQuery, Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
 
@@ -7,11 +7,53 @@ const LogoWallComponent = ({ isLarge }) => {
   const { t } = useTranslation();
   const theme = useTheme();
   const isNarrowScreen = useMediaQuery(theme.breakpoints.down("md"));
-  const imagePaths = [images.logo1, images.logo2, images.logo3, images.logo4];
+  const [scaleFactor, setScaleFactor] = useState(1);
   const spacing = theme.spacing(27.25);
 
   const top = isLarge ? theme.spacing(15.25) : theme.spacing(13.5);
   const textAlignment = isLarge ? "center" : "left";
+
+  const logos = [
+    {
+      imageUrl: images.logo1,
+      width: 178,
+      height: 175,
+    },
+    {
+      imageUrl: images.logo2,
+      width: 178,
+      height: 178,
+    },
+    {
+      imageUrl: images.logo3,
+      width: 214,
+      height: 119,
+    },
+    {
+      imageUrl: images.logo4,
+      width: 231,
+      height: 109,
+    },
+  ];
+
+  useEffect(() => {
+    // 创建一个函数来更新scaleFactor
+    const updateScaleFactor = () => {
+      const screenWidth = window.innerWidth;
+      const baseScreenWidth = 1920;
+      const newScaleFactor =
+        screenWidth < baseScreenWidth ? screenWidth / baseScreenWidth : 1;
+      setScaleFactor(newScaleFactor);
+    };
+
+    updateScaleFactor();
+
+    window.addEventListener("resize", updateScaleFactor);
+
+    return () => {
+      window.removeEventListener("resize", updateScaleFactor);
+    };
+  }, []);
 
   return (
     <>
@@ -35,32 +77,22 @@ const LogoWallComponent = ({ isLarge }) => {
       </Box>
       <Box
         sx={{
-          pt: isLarge ? theme.spacing(11.25) : theme.spacing(6.75),
-          pb: theme.spacing(13.25),
-          px: theme.spacing(12.25),
-          gap: spacing,
+          py: theme.spacing(6.25),
+          px: theme.spacing(6.25),
         }}
       >
-        <Grid container columnSpacing={isNarrowScreen ? 0 : spacing}>
-          {imagePaths.map((image, index) => (
-            <Grid
-              item
-              xs={6}
-              md={3}
-              key={index}
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-              }}
-            >
+        <Grid container justifyContent="space-around" alignItems="center">
+          {logos.map((logo, index) => (
+            <Grid item xs={3} key={index} style={{ textAlign: "center" }}>
               <Box
+                component="img"
+                src={logo.imageUrl}
+                alt={`Logo ${index + 1}`}
                 sx={{
-                  width: "100%",
-                  paddingTop: "calc(100% * (178 /231))",
-                  backgroundImage: `url(${image})`,
-                  backgroundSize: "contain",
-                  backgroundRepeat: "no-repeat",
-                  backgroundPosition: "center",
+                  maxWidth: "100%",
+                  maxHeight: "100%",
+                  width: `${scaleFactor * logo.width}px`,
+                  height: `${scaleFactor * logo.height}px`,
                 }}
               />
             </Grid>

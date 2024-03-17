@@ -25,20 +25,6 @@ i18n.use(initReactI18next).init({
         // Home Products
         homeFanTab: "Electric Ducted Fan",
         homeAircraftTab: "Ducted Fan Derivative Aircraft",
-        homeProduct1Title: "60KG Class Ducted Electric Fan",
-        homeProduct1Subtitle: "60KG Class Ducted Electric Fan",
-        homeProduct2Title: "60KG Class Ducted Electric Fan",
-        homeProduct2Subtitle: "60KG Class Ducted Electric Fan",
-        homeProduct3Title: "60KG Class Ducted Electric Fan",
-        homeProduct3Subtitle: "60KG Class Ducted Electric Fan",
-        homeProduct4Title: "60KG Class Ducted Electric Fan",
-        homeProduct4Subtitle: "60KG Class Ducted Electric Fan",
-        homeProduct5Title: "60KG Class Ducted Electric Fan",
-        homeProduct5Subtitle: "60KG Class Ducted Electric Fan",
-        homeProduct6Title: "60KG Class Ducted Electric Fan",
-        homeProduct6Subtitle: "60KG Class Ducted Electric Fan",
-        homeProduct7Title: "60KG Class Ducted Electric Fan",
-        homeProduct7Subtitle: "60KG Class Ducted Electric Fan",
         // Footer
         footerAbout: "About Us",
         footerContact: "Contact Us",
@@ -51,11 +37,11 @@ i18n.use(initReactI18next).init({
         // Products
         prodcuctFan: "electric ducted fan",
         productAircraft: "ducted fan derivative aircraft",
-        fan60kg: "60KG Thrust",
+        fan60kg: "60kg",
         fan60kgSubtitle: "For a fixed-wing aircraft and a scale eVTOL.",
-        fan200kg: "200KG Thrust",
-        fan500kg: "500KG Thrust",
-        fan1000kg: "1000KG Thrust",
+        fan200kg: "200kg",
+        fan500kg: "500kg",
+        fan1000kg: "1000kg",
         aircraft200kg: "200KG class",
         aircraft200kgSubtitle: "Quad ducted fan VTOL UAV",
         aircraft260kg: "260KG class",
@@ -78,11 +64,30 @@ i18n.use(initReactI18next).init({
         productDetailTakeoffRateSpeed: "takeoff rated speed",
         productDetailCuiseRatedSpeed: "cruise rated speed",
         productDetailMotorPower: "maximum motor power",
+        productTitleClass: "Class",
+        productTitleContent: "Electric Ducted Fan",
+        productFan60kgSubtitle:
+          "Our EDF has been successfully deployed across eVTOL and UAV projects.",
+        productFan200kgSubtitle:
+          "Designed for Industrial drones,eVTOL,general aviation.",
+        productFan500kgSubtitle: "Designed for eVTOL,fixed-wing UAV,airship.",
+        productFan1000kgSubtitle:
+          "Designed for electric passenger jet,eVTOL,airboat.",
+        aircraft200kgDetail: "200kg Class \nQuad Ducted Fan VTOL UAV",
+        aircraft260kgDetail: "260kg Class \nSingle-solider VTOL Aircraft",
+        aircraft1600kgDetail: "1600kg Class \nMulti-mission VTOL UAV",
+        aircraft200kgSubtitle:
+          "he scenarios include high-rise firefighting, mountainous terrain, maritime environments, and confined spaces, with high wind resistance and strong safety performance.",
+        aircraft260kgSubtitle:
+          "Providing cost-effective tools for individual combat, border patrols, and urban emergency rescue, combining the low-noise and safety features of EDF.",
+        aircraft1600kgSubtitle:
+          "Fast, reliable, and affordable cargo shipping for cities and underserved areas, serving diverse supply chain needs.",
         // Service
         serviceProvideTitle: "We Provide",
-        serviceContent1: "Customized design/delivery of ducted fan products",
-        serviceContent2:
-          "Design/development/delivery of ducted fan propelled aircraft",
+        serviceContent1: "Customized design/delivery of",
+        serviceContentSubtitle1: "ducted fan products",
+        serviceContent2: "Design/development/delivery of",
+        serviceContentSubtitle2: "ducted fan propelled aircraft",
         serviceDetailTitle1:
           "Efficient integrated design of internal and external flow of ducted fan",
         serviceDetailTitle2: "Design,analysis and test of low noise ducted fan",
@@ -171,6 +176,8 @@ i18n.use(initReactI18next).init({
         aircraft1600kg: "1600KG 级",
         aircraft1600kgSubtitle: "物流支援无人机",
         productMore: "了解更多",
+        productTitleClass: "Class",
+        productTitleContent: "Electric Ducted Fan",
         // Product Detail
         productFan60kgDetail: "60kg级别电动涵道风扇",
         productFan200kgDetail: "200kg级别电动涵道风扇",
@@ -186,10 +193,28 @@ i18n.use(initReactI18next).init({
         productDetailTakeoffRateSpeed: "起飞额定转速",
         productDetailCuiseRatedSpeed: "巡航额定转速",
         productDetailMotorPower: "电机最大功率",
+        productFan60kgSubtitle:
+          "Our EDF has been successfully deployed across eVTOL and UAV projects.",
+        productFan200kgSubtitle:
+          "Designed for Industrial drones,eVTOL,general aviation.",
+        productFan500kgSubtitle: "Designed for eVTOL,fixed-wing UAV,airship.",
+        productFan1000kgSubtitle:
+          "Designed for electric passenger jet,eVTOL,airboat.",
+        aircraft200kgDetail: "200kg Class \nQuad Ducted Fan VTOL UAV",
+        aircraft260kgDetail: "260kg Class \nSingle-solider VTOL Aircraft",
+        aircraft1600kgDetail: "1600kg Class \nMulti-mission VTOL UAV",
+        aircraft200kgSubtitle:
+          "he scenarios include high-rise firefighting, mountainous terrain, maritime environments, and confined spaces, with high wind resistance and strong safety performance.",
+        aircraft260kgSubtitle:
+          "Providing cost-effective tools for individual combat, border patrols, and urban emergency rescue, combining the low-noise and safety features of EDF.",
+        aircraft1600kgSubtitle:
+          "Fast, reliable, and affordable cargo shipping for cities and underserved areas, serving diverse supply chain needs.",
         // Service
         serviceProvideTitle: "我们提供",
-        serviceContent1: "涵道风扇产品定制化设计/交付",
-        serviceContent2: "涵道风扇推进飞行器设计/开发/交付",
+        serviceContent1: "Customized design/delivery of",
+        serviceContentSubtitle1: "ducted fan products",
+        serviceContent2: "Design/development/delivery of",
+        serviceContentSubtitle2: "ducted fan propelled aircraft",
         serviceDetailTitle1: "高效的涵道风扇内外流一体化设计",
         serviceDetailTitle2: "低噪声涵道风扇设计、分析及测试",
         serviceDetailTitle3: "轻质高强结构设计分析、测试及生产",

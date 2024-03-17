@@ -9,7 +9,15 @@ import {
   ButtonBase,
 } from "@mui/material";
 
-const ProductSmallCard = ({ image, title, subtitle, isSelected, onClick }) => {
+const ProductSmallCard = ({
+  image,
+  title,
+  subtitle,
+  isSelected,
+  onClick,
+  top,
+  paddingBottom,
+}) => {
   const theme = useTheme();
 
   return (
@@ -33,7 +41,7 @@ const ProductSmallCard = ({ image, title, subtitle, isSelected, onClick }) => {
         sx={{
           width: "100%",
           height: "auto",
-          paddingBottom: "calc(100% * (820 / 550))",
+          paddingBottom: paddingBottom,
           position: "relative",
           overflow: "hidden", // Ensures nothing spills out
           backgroundImage: `url(${image})`,
@@ -54,7 +62,7 @@ const ProductSmallCard = ({ image, title, subtitle, isSelected, onClick }) => {
       >
         <CardContent
           sx={{
-            top: "65%",
+            top: top ?? "65%",
             position: "absolute",
             px: "10%",
             textAlign: "center",

@@ -40,6 +40,9 @@ const theme = createTheme({
     h4: {
       fontFamily: "PingFangSC-Thin, Arial, sans-serif",
     },
+    h5: {
+      fontFamily: "HarmonyOS-Sans-SC-Black, Arial, sans-serif",
+    },
     navFontSize: "0.825rem",
   },
   spacing: 8, // 间距基准

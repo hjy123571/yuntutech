@@ -22,6 +22,7 @@ const ProductBannerCard = ({
         backgroundSize: "contain",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
+        overflow: "hidden",
       }}
     >
       <Box
